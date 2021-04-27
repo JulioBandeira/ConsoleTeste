@@ -4,6 +4,19 @@ public class Program
 {
 	public static Program instance;
 
+	public string ConcatenarArrayParaString(string[] array) {
+
+		string array_string = "";
+
+        for (int i = 0; i < array.Length; i++)
+        {
+			array_string += $"{array[i]},";
+        }
+
+		Console.WriteLine(array_string);
+		return array_string;
+	}
+
 	public string OrdenaArray(params string[] arr)
 	{
 		var resultado = string.Empty;
@@ -25,9 +38,9 @@ public class Program
 			}
 		}
 
-		Console.WriteLine(arr);
-		return resultado;
+		return ConcatenarArrayParaString(arr);
 	}
+
 
 	public string BuscaItensFaltantesNaSequencia(params string[] args)
 	{
