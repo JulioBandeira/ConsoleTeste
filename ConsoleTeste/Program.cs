@@ -7,7 +7,6 @@ public class Program
 
     public string RetirarZeroArrayIndexZero(string array_string)
     {
-
         string[] array = array_string.Split(",");
 
         for (int i = 0; i < array_string.Split(",").Length; i++)
