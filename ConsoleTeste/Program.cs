@@ -57,7 +57,6 @@ public class Program
 
     public int PegaUltimoElementoArray(params string[] args)
     {
-
         return Convert.ToInt32(args[args.Length - 1]);
     }
 
@@ -73,7 +72,7 @@ public class Program
                 new_array[o] = args[o];
         }
 
-        for (int c = 0; c < new_array.Length; c++)
+        for (int c = 0; c < 10; c++)
         {
             if (new_array[c] == elemento)
                 posicao = c;
