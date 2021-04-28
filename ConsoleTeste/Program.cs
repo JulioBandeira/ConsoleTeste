@@ -10,10 +10,7 @@ public class Program
     /// </summary>
     /// <param name="array_string"></param>
     /// <returns></returns>
-    public string[] StringParaArray(string array_string)
-    {
-        return array_string.Split(",");
-    }
+    public string[] StringParaArray(string array_string) => array_string.Split(",");
 
     /// <summary>
     /// Método para retirar o zero da string 01, tendo a posição do index 0 do array.
@@ -56,25 +53,25 @@ public class Program
     /// <summary>
     /// Método tem objetivo de ordenar um array em ordem crescente usando algoritimo bubble sort 
     /// </summary>
-    /// <param name="arr"></param>
+    /// <param name="array"></param>
     /// <returns></returns>
-    public string OrdenaArray(params string[] arr)
+    public string OrdenaArray(params string[] array)
     {
-        int n = arr.Length;
-        String temp;
+        int tamanho_array = array.Length;
+        string string_temporaria;
 
-        for (int j = 0; j < n - 1; j++)
+        for (int j = 0; j < tamanho_array - 1; j++)
 
-            for (int i = j + 1; i < n; i++)
+            for (int i = j + 1; i < tamanho_array; i++)
 
-                if (arr[j].CompareTo(arr[i]) > 0)
+                if (array[j].CompareTo(array[i]) > 0)
                 {
-                    temp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = temp;
+                    string_temporaria = array[j];
+                    array[j] = array[i];
+                    array[i] = string_temporaria;
                 }
 
-        return RetirarZeroArrayIndexZero(ConcatenarArrayParaString(arr));
+        return RetirarZeroArrayIndexZero(ConcatenarArrayParaString(array));
     }
 
     /// <summary>
@@ -122,7 +119,7 @@ public class Program
     public string BuscaItensFaltantesNaSequencia(params string[] args)
     {
         var array_todos = new string[PegaUltimoElementoArray(args[0].Split(','))];
-        var array_original = args[0].Split(',');
+        var array_original = StringParaArray(args[0]); 
         var array_temperario = array_todos;
 
         for (int i = 0; i < array_todos.Length; i++)
