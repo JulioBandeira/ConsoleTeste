@@ -12,7 +12,7 @@ public class Program
     public int PegaUltimoElementoArray(params string[] array) => Convert.ToInt32(array[array.Length - 1]);
 
     /// <summary>
-    /// Método tem objetivo de transformar um string para array desde a string seja contatenada com 
+    /// Método tem objetivo de transformar um string para o array desde a string seja contatenada com 
     /// vírgula ",";
     /// </summary>
     /// <param name="array_string"></param>
