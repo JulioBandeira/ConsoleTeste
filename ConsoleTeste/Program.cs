@@ -13,7 +13,6 @@ public class Program
         {
             if (i == 0)
                 array[i] = "1";
-            break;
         }
 
         return ConcatenarArrayParaString(array);
