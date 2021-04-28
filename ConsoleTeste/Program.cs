@@ -5,6 +5,13 @@ public class Program
     public static Program instance;
 
     /// <summary>
+    /// Método tem o objetivo de pegar o último elemento do array.
+    /// </summary>
+    /// <param name="args"></param>
+    /// <returns></returns>
+    public int PegaUltimoElementoArray(params string[] args) => Convert.ToInt32(args[args.Length - 1]);
+
+    /// <summary>
     /// Método tem objetivo de transformar um string para array desde a string seja contatenada com 
     /// vírgula ",";
     /// </summary>
@@ -72,16 +79,6 @@ public class Program
                 }
 
         return RetirarZeroArrayIndexZero(ConcatenarArrayParaString(array));
-    }
-
-    /// <summary>
-    /// Método tem o objetivo de pegar o último elemento do array.
-    /// </summary>
-    /// <param name="args"></param>
-    /// <returns></returns>
-    public int PegaUltimoElementoArray(params string[] args)
-    {
-        return Convert.ToInt32(args[args.Length - 1]);
     }
 
     /// <summary>
