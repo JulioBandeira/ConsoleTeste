@@ -12,7 +12,6 @@ public class Program
     /// <returns></returns>
     public string[] StringParaArray(string array_string)
     {
-
         return array_string.Split(",");
     }
 
