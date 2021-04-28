@@ -7,9 +7,9 @@ public class Program
     /// <summary>
     /// Método tem o objetivo de pegar o último elemento do array.
     /// </summary>
-    /// <param name="args"></param>
+    /// <param name="array"></param>
     /// <returns></returns>
-    public int PegaUltimoElementoArray(params string[] args) => Convert.ToInt32(args[args.Length - 1]);
+    public int PegaUltimoElementoArray(params string[] array) => Convert.ToInt32(array[array.Length - 1]);
 
     /// <summary>
     /// Método tem objetivo de transformar um string para array desde a string seja contatenada com 
@@ -84,17 +84,17 @@ public class Program
     /// <summary>
     /// Método tem objetivo de remover o item do array, através do elemento desejado.
     /// </summary>
-    /// <param name="args"></param>
+    /// <param name="array"></param>
     /// <param name="elemento"></param>
     /// <returns></returns>
-    public string[] RemoveItemArray(string[] args, string elemento)
+    public string[] RemoveItemArray(string[] array, string elemento)
     {
         int posicao = 0;
-        var novo_array = new string[args.Length + 1];
+        var novo_array = new string[array.Length + 1];
 
-        for (int o = 0; o < (args.Length); o++)
-            if (!string.IsNullOrEmpty(args[o]))
-                novo_array[o] = args[o];
+        for (int o = 0; o < (array.Length); o++)
+            if (!string.IsNullOrEmpty(array[o]))
+                novo_array[o] = array[o];
 
         for (int c = 0; c < 10; c++)
             if (novo_array[c] == elemento)
@@ -111,12 +111,12 @@ public class Program
     /// <summary>
     /// Método tem o objetivo de retornar os itens faltantes do array que sendo passado por paramentro
     /// </summary>
-    /// <param name="args"></param>
+    /// <param name="array"></param>
     /// <returns></returns>
-    public string BuscaItensFaltantesNaSequencia(params string[] args)
+    public string BuscaItensFaltantesNaSequencia(params string[] array)
     {
-        var array_todos = new string[PegaUltimoElementoArray(args[0].Split(','))];
-        var array_original = StringParaArray(args[0]); 
+        var array_todos = new string[PegaUltimoElementoArray(array[0].Split(','))];
+        var array_original = StringParaArray(array[0]); 
         var array_temperario = array_todos;
 
         for (int i = 0; i < array_todos.Length; i++)
