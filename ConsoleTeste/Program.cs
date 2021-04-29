@@ -116,8 +116,8 @@ public class Program
     public string BuscaItensFaltantesNaSequencia(params string[] array)
     {
         var array_todos = new string[PegaUltimoElementoArray(array[0].Split(','))];
-        var array_original = StringParaArray(array[0]); 
-        var array_temperario = array_todos;
+        var array_original = StringParaArray(array[0]);
+        var array_temporario = array_todos;
 
         for (int i = 0; i < array_todos.Length; i++)
             array_todos[i] = (i + 1).ToString();
@@ -127,9 +127,9 @@ public class Program
             for (int j = 0; j < array_original.Length; j++)
 
                 if (array_todos[i] == array_original[j])
-                    array_temperario = RemoveItemArray(array_temperario, array_todos[i]);
+                    array_temporario = RemoveItemArray(array_temporario, array_todos[i]);
 
-        return ConcatenarArrayParaString(array_temperario);
+        return ConcatenarArrayParaString(array_temporario);
     }
 
     // Não alterar o codigo abaixo abaixo!
